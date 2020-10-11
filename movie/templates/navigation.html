@@ -1,0 +1,17 @@
+<nav id="nav">
+  <img id="logo" src="{{ url_for('static', filename='ayaya.jpg') }}" />
+
+  <h2 id="nav-header">
+    {% if 'username' in session %} Hello, {{ session['username'] }} {%
+    endif %}
+  </h2>
+  <a class="btn-nav" href="{{ url_for('home_bp.home') }}">Home</a>
+  <div>
+
+    <h3>
+      <a class="btn-nav" href="{{ url_for('news_bp.movies_by_date') }}">
+        Browse by Ranking
+      </a>
+    </h3>
+
+</nav>
